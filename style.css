@@ -1,3 +1,10 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------------------
+version:   1.0
+date:      19/11/2019
+author:    Kuba Mikołajczyk
+email:     Qba600@gmail.com
+*/
 /*
 ---------------------------------------------
                GLOBAL VARIABLES
@@ -8,8 +15,26 @@
                GLOBAL SETTINGS
 ---------------------------------------------
 */
+/* Remove padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   box-sizing: border-box;
+}
+
+body {
+  color: #2d3e50;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*
@@ -17,16 +42,109 @@ html {
                   REUSABLE
 ---------------------------------------------
 */
+.elevate-hover:hover, .navbar-brand:hover {
+  transform: translateY(-3px);
+}
+
+.main-color-hover:hover, .nav-menu__link a:hover {
+  color: #1ABC9C;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
 /*
 ---------------------------------------------
                  GRID SYSTEM
 ---------------------------------------------
 */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+
 /*
 ---------------------------------------------
                    HEADER
 ---------------------------------------------
 */
+.navbar {
+  background: #2d3e50;
+  padding: 1.5rem 0.5rem;
+}
+
+.navbar-brand {
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 1.6rem;
+  transition: 0.3s ease;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-menu__link {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.nav-menu__link a {
+  color: white;
+  transition: 0.3s ease;
+}
+
 /*
 ---------------------------------------------
                    FOOTER
