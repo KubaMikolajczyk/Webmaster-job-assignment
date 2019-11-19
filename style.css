@@ -58,6 +58,54 @@ a {
   z-index: 1030;
 }
 
+.star-divider {
+  margin: 1.25rem 0 1.5rem;
+}
+.star-divider .star-divider__icon {
+  font-size: 2rem;
+  position: relative;
+}
+.star-divider .star-divider__icon:before {
+  content: "";
+  width: 112px;
+  height: 4px;
+  position: absolute;
+  left: -8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+.star-divider .star-divider__icon:after {
+  content: "";
+  width: 112px;
+  height: 4px;
+  position: absolute;
+  left: 3.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+.star-divider--white .star-divider__icon {
+  color: white;
+}
+.star-divider--white .star-divider__icon:before {
+  background: white;
+}
+.star-divider--white .star-divider__icon:after {
+  background: white;
+}
+
+.star-divider--dark .star-divider__icon {
+  color: #2d3e50;
+}
+.star-divider--dark .star-divider__icon:before {
+  background: #2d3e50;
+}
+.star-divider--dark .star-divider__icon:after {
+  background: #2d3e50;
+}
+
 /*
 ---------------------------------------------
                  GRID SYSTEM
@@ -70,6 +118,12 @@ a {
   margin-right: auto;
   margin-left: auto;
   display: flex;
+}
+
+.container--column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 576px) {
@@ -106,7 +160,7 @@ a {
 
 /*
 ---------------------------------------------
-                   HEADER
+                 NAVIGATION
 ---------------------------------------------
 */
 .navbar {
@@ -143,6 +197,34 @@ a {
 .nav-menu__link a {
   color: white;
   transition: 0.3s ease;
+}
+
+/*
+---------------------------------------------
+                    HEADER
+---------------------------------------------
+*/
+.masthead {
+  padding-top: calc(6rem + 104px);
+  padding-bottom: 6rem;
+  background: #1ABC9C;
+  font-family: "Montserrat", sans-serif;
+}
+
+.masthead-img {
+  width: 15rem;
+  margin-bottom: 3rem;
+}
+
+.masthead-header {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.masthead-subheader {
+  font-size: 1.5rem;
+  color: white;
 }
 
 /*

@@ -19,6 +19,10 @@ $main-light-green: #1ABC9C;
 // TRANSITIONS
 $standard: .3s ease;
 
+// FONTS
+$main-font: 'Lato', sans-serif;
+$secondary-font:'Montserrat', sans-serif;
+
 /*
 ---------------------------------------------
                GLOBAL SETTINGS
@@ -41,7 +45,7 @@ html {
 
 body{
   color: $main-dark-blue;
-  font-family: 'Lato', sans-serif;
+  font-family: $main-font;
 }
 
 a{
@@ -78,6 +82,66 @@ a{
   z-index: 1030;
 }
 
+// Dividers
+
+.star-divider{
+  margin: 1.25rem 0 1.5rem;
+ .star-divider__icon{
+   font-size: 2rem;
+   position: relative;
+
+   &:before{
+     content: "";
+     width: 112px;
+     height: 4px;
+     position: absolute;
+     left: -8rem;
+     top: 50%;
+     transform: translateY(-50%);
+     border-radius: 4px;
+   }
+
+   &:after{
+     content: "";
+     width: 112px;
+     height: 4px;
+     position: absolute;
+     left: 3.3rem;
+     top: 50%;
+     transform: translateY(-50%);
+     border-radius: 4px;
+   }
+ }
+}
+
+.star-divider--white{
+  .star-divider__icon{
+    color:white;
+
+    &:before{
+      background: white;
+    }
+
+    &:after{
+      background: white;
+    }
+  }
+}
+
+.star-divider--dark{
+  .star-divider__icon{
+    color: $main-dark-blue;
+
+    &:before{
+      background: $main-dark-blue;
+    }
+
+    &:after{
+      background: $main-dark-blue;
+    }
+  }
+}
+
 
 /*
 ---------------------------------------------
@@ -93,6 +157,13 @@ a{
   margin-left: auto;
   display: flex;
 }
+
+.container--column{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media(min-width: 576px){
   .container{
     max-width: 540px;
@@ -132,7 +203,7 @@ a{
 
 /*
 ---------------------------------------------
-                   HEADER
+                 NAVIGATION
 ---------------------------------------------
 */
 
@@ -146,7 +217,7 @@ a{
   white-space: nowrap;
   text-transform: uppercase;
   font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $secondary-font;
   color:white;
   font-size: 1.6rem;
   transition: $standard;
@@ -162,7 +233,7 @@ a{
 }
 
 .nav-menu__link{
-  font-family: 'Montserrat', sans-serif;
+  font-family: $secondary-font;
   text-transform: uppercase;
   font-weight: 700;
   padding: .5rem 1rem;
@@ -172,6 +243,36 @@ a{
   color: white;
   transition: $standard;
   @extend .main-color-hover;
+}
+
+
+/*
+---------------------------------------------
+                    HEADER
+---------------------------------------------
+*/
+
+.masthead{
+  padding-top: calc(6rem + 104px);
+  padding-bottom: 6rem;
+  background: $main-light-green;
+  font-family: $secondary-font;
+}
+
+.masthead-img{
+  width: 15rem;
+  margin-bottom: 3rem;
+}
+
+.masthead-header{
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.masthead-subheader{
+  font-size: 1.5rem;
+  color: white;
 }
 
 /*
