@@ -24,6 +24,10 @@ email:     Qba600@gmail.com
   -moz-osx-font-smoothing: grayscale;
 }
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -153,9 +157,26 @@ a {
   margin-left: -15px;
 }
 
+.col-12, .col-4 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .col-8 {
   flex: 0 0 66.66667%;
   max-width: 66.66667%;
+}
+
+.col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 
 /*
@@ -234,14 +255,39 @@ a {
 */
 /*
 ---------------------------------------------
-                HERO SECTION
----------------------------------------------
-*/
-/*
----------------------------------------------
               PORTFOLIO SECTION
 ---------------------------------------------
 */
+.portfolio__card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-bottom: 30px;
+}
+
+.overlay-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #1ABC9C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overlay-layer i {
+  font-size: 5rem;
+  color: white;
+}
+
+.portfolio-img {
+  max-width: 100%;
+}
+
 /*
 ---------------------------------------------
                 ABOUT SECTION
