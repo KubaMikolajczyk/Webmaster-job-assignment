@@ -179,6 +179,14 @@ a {
   max-width: 100%;
 }
 
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
 /*
 ---------------------------------------------
                  NAVIGATION
@@ -266,7 +274,7 @@ a {
 .portfolio__card {
   position: relative;
   overflow: hidden;
-  border-radius: 0.1rem;
+  border-radius: 0.2rem;
   margin-bottom: 30px;
 }
 
@@ -295,6 +303,7 @@ a {
 
 .portfolio-img {
   max-width: 100%;
+  display: block;
 }
 
 .portfolio__header-box {
@@ -317,6 +326,55 @@ a {
                 ABOUT SECTION
 ---------------------------------------------
 */
+.about {
+  background: #1ABC9C;
+  padding: 6rem 0;
+}
+
+.about__header-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.about__header {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+.about__desc {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 170%;
+}
+
+.about__download {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about__download-btn {
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  transition: 0.3s ease;
+}
+.about__download-btn:hover {
+  background: white;
+  color: #1ABC9C;
+}
+
+.about__download-btn i {
+  margin-right: 0.4rem;
+}
+
 /*
 ---------------------------------------------
                 CONTACT SECTION
