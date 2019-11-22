@@ -121,7 +121,6 @@ a {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
 }
 
 .container--column {
@@ -157,7 +156,7 @@ a {
   margin-left: -15px;
 }
 
-.col-12, .col-4, .col-6 {
+.col-12, .col-4, .col-6, col-8 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -174,16 +173,21 @@ a {
   max-width: 50%;
 }
 
+.col-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+
 .col-12 {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-.mr-auto {
+.mr-auto, .mx-auto {
   margin-right: auto;
 }
 
-.ml-auto {
+.ml-auto, .mx-auto {
   margin-left: auto;
 }
 
@@ -195,6 +199,10 @@ a {
 .navbar {
   background: #2d3e50;
   padding: 1.5rem 0.5rem;
+}
+
+.navbar-wrapper {
+  display: flex;
 }
 
 .navbar-brand {
@@ -238,6 +246,13 @@ a {
   padding-bottom: 6rem;
   background: #1ABC9C;
   font-family: "Montserrat", sans-serif;
+}
+
+.masthead-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .masthead-img {
@@ -380,5 +395,80 @@ a {
                 CONTACT SECTION
 ---------------------------------------------
 */
+.contact {
+  padding: 6rem 0;
+}
+
+.contact__header-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact__header {
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #777777;
+  opacity: 0;
+}
+
+.contact__form input[type=text] {
+  padding: 2rem 0;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1.5rem;
+  color: #373737;
+}
+.contact__form input[type=text]:focus {
+  outline: none;
+}
+
+.contact__form textarea {
+  padding: 2rem 0;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1.5rem;
+  color: #373737;
+  height: 14rem;
+  margin-bottom: 1.5rem;
+  resize: none;
+}
+.contact__form textarea:focus {
+  outline: none;
+}
+
+.contact__form textarea::placeholder {
+  font-size: 1.25rem;
+  font-family: "Lato", sans-serif;
+}
+
+.contact__form button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1.2rem 0.2rem;
+  width: 7rem;
+  background: #1ABC9C;
+  border-color: #1ABC9C;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+.contact__form button:hover {
+  background: #12826c;
+}
 
 /*# sourceMappingURL=style.css.map */
