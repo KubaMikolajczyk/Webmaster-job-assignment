@@ -18,6 +18,7 @@ $main-light-green: #1ABC9C;
 $grey: #777777;
 $lightgrey: lighten($grey, 40);
 $darkgrey: darken($grey, 25);
+$accent-dark-blue: #1a252f;
 
 // TRANSITIONS
 $standard: .3s ease;
@@ -48,6 +49,7 @@ $secondary-font:'Montserrat', sans-serif;
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -201,13 +203,19 @@ a{
   margin-left: -15px;
 }
 
-.col-12, .col-4, .col-6, col-8{
+.col-12, .col-4, .col-6, col-8, .col-lg-4, .col-lg-6, .col-lg-8{
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
 
+.col-lg-4{
+  @media (min-width: 992px){
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
 
 .col-4{
   flex: 0 0 33.33333%;
@@ -329,6 +337,72 @@ a{
 ---------------------------------------------
 */
 
+.footer__top{
+  background: $main-dark-blue;
+  padding: 3rem 0;
+}
+
+.footer__header{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+  margin-bottom: 1.5rem;
+}
+
+.footer__text{
+  color: white;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 155%;
+}
+
+.footer__text span a{
+  color: $main-light-green;
+  transition: $standard;
+
+  &:hover{
+    color: darken($main-light-green, 12);
+  }
+}
+
+.social-nav{
+  display: flex;
+  justify-content: center;
+}
+
+.social-nav a{
+  padding: 1rem;
+  border: 2px solid white;
+  color: white;
+  border-radius: 40px;
+  margin: 0 .4rem;
+  transition: $standard;
+
+  &:hover{
+    background: white;
+    color: $main-dark-blue;
+  }
+}
+
+.social-nav a i{
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__bottom{
+  background: $accent-dark-blue;
+  padding: 1.5rem 0;
+}
+
+.footer__credits{
+  text-align: center;
+  color: white;
+  font-size: .8rem;
+}
 
 /*
 ---------------------------------------------
@@ -337,8 +411,8 @@ a{
 */
 
 .portfolio{
-  margin-top:6rem;
-  margin-bottom: calc(6rem - 30px);
+  padding: 6rem 0;
+  margin-bottom: -30px
 }
 
 .portfolio__card{
