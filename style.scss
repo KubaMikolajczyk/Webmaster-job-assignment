@@ -309,13 +309,23 @@ a{
   font-family: $secondary-font;
   text-transform: uppercase;
   font-weight: 700;
-  padding: .5rem 1rem;
+
 }
 
 .nav-menu__link a{
   color: white;
   transition: $standard;
   @extend .main-color-hover;
+  padding: 1rem 1.5rem;
+}
+
+.nav-active{
+  background: $main-light-green;
+  border-radius: 4px;
+
+  &:hover{
+    color: white !important;
+  }
 }
 
 

@@ -254,12 +254,20 @@ a {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 0.5rem 1rem;
 }
 
 .nav-menu__link a {
   color: white;
   transition: 0.3s ease;
+  padding: 1rem 1.5rem;
+}
+
+.nav-active {
+  background: #1ABC9C;
+  border-radius: 4px;
+}
+.nav-active:hover {
+  color: white !important;
 }
 
 /*
