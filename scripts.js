@@ -59,6 +59,8 @@
     //-----------------------------------------------
     // Implement modals behaviour
 
+    // code below is not pure ,I know i can make it better but as for now Im pretty beginner in JS
+
     // Get the modal
     const modal1 = document.getElementById("portfolio-modal-1");
     const modal2 = document.getElementById("portfolio-modal-2");

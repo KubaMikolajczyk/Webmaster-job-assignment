@@ -101,13 +101,13 @@ a {
   }
 }
 .star-divider--white .star-divider__icon {
-  color: white;
+  color: #ffffff;
 }
 .star-divider--white .star-divider__icon:before {
-  background: white;
+  background: #ffffff;
 }
 .star-divider--white .star-divider__icon:after {
-  background: white;
+  background: #ffffff;
 }
 
 .star-divider--dark .star-divider__icon {
@@ -140,7 +140,7 @@ a {
   }
 }
 .header--white {
-  color: white;
+  color: #ffffff;
 }
 
 .portfolio-modal {
@@ -209,7 +209,7 @@ a {
   padding: 0.6rem 1.5rem;
   background: #1ABC9C;
   border-radius: 4px;
-  color: white;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 
@@ -321,7 +321,7 @@ a {
   text-transform: uppercase;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: #ffffff;
   font-size: 1.6rem;
   transition: 0.3s ease;
 }
@@ -351,7 +351,7 @@ a {
 }
 
 .nav-menu__link a {
-  color: white;
+  color: #ffffff;
   transition: 0.3s ease;
   padding: 1rem 1.5rem;
 }
@@ -361,7 +361,7 @@ a {
   border-radius: 4px;
 }
 .nav-active:hover {
-  color: white !important;
+  color: #ffffff !important;
 }
 
 .navbar-mobile {
@@ -394,7 +394,7 @@ a {
 .hamburger__inner {
   width: 100%;
   height: 2.5px;
-  background-color: white;
+  background-color: #ffffff;
   position: absolute;
   left: 0;
   top: 50%;
@@ -406,7 +406,7 @@ a {
 .hamburger__inner::after {
   width: 100%;
   height: 2.5px;
-  background-color: white;
+  background-color: #ffffff;
   position: absolute;
   content: "";
   left: 0;
@@ -436,7 +436,7 @@ a {
 .navigation-mobile {
   width: 100%;
   z-index: 1020;
-  background-color: white;
+  background-color: #ffffff;
   padding-top: 80px;
   transform: translateY(-180px);
   transition: transform 0.3s 0.1s ease-in-out;
@@ -497,7 +497,7 @@ a {
 .masthead-header {
   font-size: 4rem;
   text-transform: uppercase;
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -509,7 +509,7 @@ a {
 .masthead-subheader {
   font-size: 1.5rem;
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
 
 @media (max-width: 991px) {
@@ -533,7 +533,7 @@ a {
 }
 
 .footer__header {
-  color: white;
+  color: #ffffff;
   text-align: center;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -541,7 +541,7 @@ a {
 }
 
 .footer__text {
-  color: white;
+  color: #ffffff;
   text-align: center;
   font-size: 1.15rem;
   line-height: 155%;
@@ -562,14 +562,14 @@ a {
 
 .social-nav a {
   padding: 1rem;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   border-radius: 40px;
   margin: 0 0.4rem;
   transition: 0.3s ease;
 }
 .social-nav a:hover {
-  background: white;
+  background: #ffffff;
   color: #2d3e50;
 }
 
@@ -594,7 +594,7 @@ a {
 
 .footer__credits {
   text-align: center;
-  color: white;
+  color: #ffffff;
   font-size: 0.8rem;
 }
 
@@ -640,7 +640,7 @@ a {
 
 .overlay-layer i {
   font-size: 5rem;
-  color: white;
+  color: #ffffff;
 }
 
 .portfolio-img {
@@ -659,7 +659,7 @@ a {
 }
 
 .about__desc {
-  color: white;
+  color: #ffffff;
   font-size: 1.2rem;
   line-height: 170%;
 }
@@ -678,13 +678,13 @@ a {
 .about__download-btn {
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
-  border: 2px solid white;
+  border: 2px solid #ffffff;
   border-radius: 4px;
-  color: white;
+  color: #ffffff;
   transition: 0.3s ease;
 }
 .about__download-btn:hover {
-  background: white;
+  background: #ffffff;
   color: #1ABC9C;
 }
 
@@ -749,7 +749,7 @@ a {
   width: 7rem;
   background: #1ABC9C;
   border-color: #1ABC9C;
-  color: white;
+  color: #ffffff;
   font-size: 1.1rem;
   border-radius: 4px;
   transition: 0.3s ease;
