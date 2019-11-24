@@ -47,10 +47,17 @@
     // Implement hamburger behavior for mobile menu
 
     const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navigation-mobile');
 
     const handleClick = () => {
         hamburger.classList.toggle('hamburger--active');
-    }
+        nav.classList.toggle('navigation-mobile--active');
+    };
 
     hamburger.addEventListener('click', handleClick)
+
+    //-----------------------------------------------
+    // Implement modals behaviour
+
+    
 })();
