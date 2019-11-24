@@ -1,30 +1,31 @@
 (function() {
     'use strict';
 
+    //-----------------------------------------------
     // Implement scrollspy for menu links
-    var section = document.querySelectorAll(".section");
-    var sections = {};
-    var section_offset = 100;
-    var i = 0;
 
-    Array.prototype.forEach.call(section, function(e) {
+    const section = document.querySelectorAll(".section");
+    const sections = {};
+    let section_offset = 100;
+
+    Array.prototype.forEach.call(section, (e) => {
         sections[e.id] = e.offsetTop;
     });
 
-    var changeActiveTo = function(currentNavEl){
+    const changeActiveTo = (currentNavEl) => {
         document.querySelector('a[href*='+ currentNavEl +']').setAttribute('class', 'nav-active');
     };
 
-    var clearNavActive = function() {
+    const clearNavActive = () => {
         if(document.querySelector('.nav-active')){
             document.querySelector('.nav-active').setAttribute('class', ' ');
         }
     };
 
-    window.onscroll = function() {
-        var scrollPosition = (document.documentElement.scrollTop || document.body.scrollTop) + section_offset;
+    window.onscroll = () => {
+        let scrollPosition = (document.documentElement.scrollTop || document.body.scrollTop) + section_offset;
 
-        for (i in sections) {
+        for (let i in sections) {
             if(scrollPosition < sections['portfolio']){
                 clearNavActive();
             }
@@ -41,4 +42,15 @@
             }
         }
     };
+
+    //-----------------------------------------------
+    // Implement hamburger behavior for mobile menu
+
+    const hamburger = document.querySelector('.hamburger');
+
+    const handleClick = () => {
+        hamburger.classList.toggle('hamburger--active');
+    }
+
+    hamburger.addEventListener('click', handleClick)
 })();

@@ -285,6 +285,12 @@ a{
   display: flex;
 }
 
+@media (max-width: 991px){
+  .navbar-wrapper{
+    display: none;
+  }
+}
+
 .navbar-brand{
   display: inline-block;
   white-space: nowrap;
@@ -328,6 +334,79 @@ a{
   }
 }
 
+//----------- MOBILE NAV -----------
+
+.navbar-mobile{
+  display: none;
+  justify-content: space-between;
+
+}
+
+@media (max-width: 991px) {
+  .navbar-mobile{
+    display: flex;
+  }
+}
+
+.hamburger{
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.hamburger__box{
+  width: 30px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+@mixin hamburger-line{
+  width: 100%;
+  height: 2.5px;
+  background-color: white;
+  position: absolute;
+}
+
+.hamburger__inner{
+  @include hamburger-line;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color .1s .2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after{
+  @include hamburger-line;
+
+  content: '';
+  left: 0;
+  transition: transform .2s .2s ease-in-out;
+}
+
+.hamburger__inner::before{
+  top: -10px;
+}
+
+.hamburger__inner::after{
+  top: 10px;
+}
+
+.hamburger--active .hamburger__inner{
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner:before{
+  transform: translateY(10px) rotate(45deg) ;
+}
+
+.hamburger--active .hamburger__inner:after{
+  transform: translateY(-10px) rotate(-45deg);
+}
 
 /*
 ---------------------------------------------
